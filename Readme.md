@@ -2,7 +2,7 @@
 *Files to look at*:
 
 * [Default.aspx](./CS/ASPxDashboard_PerformDrillDown/Default.aspx) (VB: [Default.aspx](./VB/ASPxDashboard_PerformDrillDown/Default.aspx))
-* [Default.aspx.cs](./CS/ASPxDashboard_PerformDrillDown/Default.aspx.cs) (VB: [Default.aspx](./VB/ASPxDashboard_PerformDrillDown/Default.aspx))
+* [Default.aspx.cs](./CS/ASPxDashboard_PerformDrillDown/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/ASPxDashboard_PerformDrillDown/Default.aspx.vb))
 * [DrillDown.js](./CS/ASPxDashboard_PerformDrillDown/Scripts/DrillDown.js) (VB: [DrillDown.js](./VB/ASPxDashboard_PerformDrillDown/Scripts/DrillDown.js))
 <!-- default file list end -->
 # ASPxDashboard - How to perform a drill-down in code
