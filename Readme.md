@@ -22,5 +22,5 @@
 
 ## More Examples
 
-- [Dashboard for MVC - How to perform a drill-down in code](https://supportcenter.devexpress.com/ticket/details/t496083)
-- [How to update the parameter value when the item's master filter state is changed](https://supportcenter.devexpress.com/ticket/details/t575012)
+- [Dashboard for MVC - How to perform a drill-down in code](https://github.com/DevExpress-Examples/aspnet-mvc-dashboard-how-to-perform-a-drill-down-in-code-t496083)
+- [Dashboard for Web Forms - How to update the parameter value when the item's master filter state is changed](https://github.com/DevExpress-Examples/how-to-update-the-parameter-value-when-the-items-master-filter-state-is-changed-t575012)
