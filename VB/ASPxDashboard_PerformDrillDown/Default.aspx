@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="true" CodeBehind="Default.aspx.vb" Inherits="ASPxDashboard_PerformDrillDown.Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="ASPxDashboard_PerformDrillDown.Default" %>
 
 <%@ Register Assembly="DevExpress.Dashboard.v17.1.Web, Version=17.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" 
     Namespace="DevExpress.DashboardWeb" TagPrefix="dx" %>
@@ -17,7 +17,7 @@
     <div style="position: absolute; left: 0; right: 0; top:50px; bottom:0;">
         <dx:ASPxDashboard ID="ASPxDashboard1" runat="server" 
             WorkingMode="Viewer" ClientInstanceName="webDashboard" 
-
+             
             ClientSideEvents-DashboardEndUpdate="function() { initializeControls(); }"
             ClientSideEvents-ActionAvailabilityChanged="function() { setState(); }"
             Width="100%" Height="100%">
@@ -26,4 +26,4 @@
     </form>
 </body>
 </html>
-<script type="text/javascript" src="<%=Page.ResolveClientUrl("~/Scripts/DrillDown.js")%>"></script>
+<script type="text/javascript" src="<%= Page.ResolveClientUrl("~/Scripts/DrillDown.js") %>"></script>
