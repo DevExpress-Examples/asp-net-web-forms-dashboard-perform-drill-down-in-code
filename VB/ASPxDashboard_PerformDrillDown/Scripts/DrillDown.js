@@ -3,7 +3,7 @@ var viewerApiExtension;
 
 function onBeforeRender(s, e) {
     dashboardControl = s.GetDashboardControl();
-    viewerApiExtension = dashboardControl.findExtension('viewer-api');
+    viewerApiExtension = dashboardControl.findExtension('viewerApi');
 }
 
 function initializeControls(s, e) {
