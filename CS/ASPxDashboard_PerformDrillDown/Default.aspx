@@ -13,10 +13,8 @@
         <div id="buttonContainer" style="float: left; margin-left: 150px;"></div>
 
         <div style="position: absolute; left: 0; right: 0; top:50px; bottom:0;">
-            <dx:ASPxDashboard ID="ASPxDashboard1" runat="server" WorkingMode="Viewer" ClientInstanceName="webDashboard"
-                Width="100%" Height="100%"
-                ClientSideEvents-DashboardEndUpdate="initializeControls"
-                ClientSideEvents-ActionAvailabilityChanged="ActionAvailabilityChanged"
+            <dx:ASPxDashboard ID="ASPxDashboard1" runat="server" WorkingMode="Viewer" 
+                ClientInstanceName="webDashboard" Width="100%" Height="100%"
                 ClientSideEvents-BeforeRender="onBeforeRender">
             </dx:ASPxDashboard>
         </div>

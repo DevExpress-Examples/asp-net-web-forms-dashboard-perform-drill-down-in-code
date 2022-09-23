@@ -1,12 +1,17 @@
 var dashboardControl;
 var viewerApiExtension;
 
-function onBeforeRender(s, e) {
+function onBeforeRender(s) {
     dashboardControl = s.GetDashboardControl();
     viewerApiExtension = dashboardControl.findExtension('viewerApi');
+
+    if (viewerApiExtension)
+        viewerApiExtension.on('itemActionAvailabilityChanged', onActionAvailabilityChanged);
+    if (dashboardControl)
+        dashboardControl.on('dashboardEndUpdate', initializeControls);
 }
 
-function initializeControls(s, e) {
+function initializeControls() {
     $("#buttonContainer").dxButton({
         onClick: performDrillAction,
     });
@@ -34,8 +39,8 @@ function getDrillDownValues() {
 
 function performDrillAction() {
     var tuple = viewerApiExtension.getItemData("gridDashboardItem1").createTuple([{
-        AxisName: "Default",
-        Value: [$("#selectBox").data("dxSelectBox").option("value")]
+        axisName: "Default",
+        value: [$("#selectBox").data("dxSelectBox").option("value")]
     }]);
 
     if (viewerApiExtension.canPerformDrillDown("gridDashboardItem1")) {
@@ -46,11 +51,11 @@ function performDrillAction() {
     };
 };
 
-function ActionAvailabilityChanged(s, e) {
+function onActionAvailabilityChanged() {
     if (viewerApiExtension.canPerformDrillDown("gridDashboardItem1")) {
         $("#buttonContainer").dxButton({
             disabled: false,
-            text: "Perform Drill-Down"
+            text: "Drill Down"
         });
         $("#selectBox").dxSelectBox({
             disabled: false
@@ -59,7 +64,7 @@ function ActionAvailabilityChanged(s, e) {
     if (viewerApiExtension.canPerformDrillUp("gridDashboardItem1")) {
         $("#buttonContainer").dxButton({
             disabled: false,
-            text: "Perform Drill-Up"
+            text: "Drill Up"
         });
         $("#selectBox").dxSelectBox({
             disabled: true
