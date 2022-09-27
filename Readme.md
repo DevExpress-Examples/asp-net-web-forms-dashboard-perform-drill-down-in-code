@@ -18,7 +18,7 @@ The [ViewerApiExtension.getAvailableDrillDownValues](https://docs.devexpress.com
 
 ![](web-dashboard-drill-down-in-code-example.png)
 
-When the Grid displays a list of products (the bottom-most detail level), you can only drill up, and the Drill Down button is changed to **Drill Up**. When you click the **Drill Up** button, the [ViewerApiExtension.performDrillUp](https://docs.devexpress.com/Dashboard/js-DevExpress.Dashboard.ViewerApiExtension#js_devexpress_dashboard_viewerapiextension_performdrillup_itemname_) method is called. This action returns you to the top detail level (a list of categories). The [ViewerApiExtension.canPerformDrillDown](https://docs.devexpress.com/Dashboard/js-DevExpress.Dashboard.ViewerApiExtension#js_devexpress_dashboard_viewerapiextension_canperformdrilldown_itemname_) and [ViewerApiExtension.canPerformDrillUp](https://docs.devexpress.com/Dashboard/js-DevExpress.Dashboard.ViewerApiExtension#js_devexpress_dashboard_viewerapiextension_canperformdrillup_itemname_) method calls check whether the Drill-Down or Drill-Up are available.
+When the Grid displays a list of products (the bottom-most detail level), you can only drill up, and the Drill Down button is changed to **Drill Up**. When you click the **Drill Up** button, the [ViewerApiExtension.performDrillUp](https://docs.devexpress.com/Dashboard/js-DevExpress.Dashboard.ViewerApiExtension#js_devexpress_dashboard_viewerapiextension_performdrillup_itemname_) method is called. This action returns you to the top detail level (a list of categories). The [ViewerApiExtension.canPerformDrillDown](https://docs.devexpress.com/Dashboard/js-DevExpress.Dashboard.ViewerApiExtension#js_devexpress_dashboard_viewerapiextension_canperformdrilldown_itemname_) and [ViewerApiExtension.canPerformDrillUp](https://docs.devexpress.com/Dashboard/js-DevExpress.Dashboard.ViewerApiExtension#js_devexpress_dashboard_viewerapiextension_canperformdrillup_itemname_) method calls check whether the Drill-Down or Drill-Up are available. 
 
 
 ## Files to Review
@@ -33,5 +33,5 @@ When the Grid displays a list of products (the bottom-most detail level), you ca
 
 ## More Examples
 
-- [Dashboard for MVC - How to perform a drill-down in code](https://github.com/DevExpress-Examples/aspnet-mvc-dashboard-how-to-perform-a-drill-down-in-code-t496083)
+- [Dashboard for MVC - How to perform a drill-down in code](https://github.com/DevExpress-Examples/mvc-dashboard-drill-down-in-code)
 - [Dashboard for Web Forms - How to update the parameter value when the item's master filter state is changed](https://github.com/DevExpress-Examples/how-to-update-the-parameter-value-when-the-items-master-filter-state-is-changed-t575012)
