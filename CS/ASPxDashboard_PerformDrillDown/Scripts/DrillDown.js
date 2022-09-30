@@ -3,12 +3,12 @@ var viewerApiExtension;
 
 function onBeforeRender(s) {
     dashboardControl = s.GetDashboardControl();
-    viewerApiExtension = dashboardControl.findExtension('viewerApi');
-
+    if (dashboardControl) {
+        viewerApiExtension = dashboardControl.findExtension('viewerApi');
+        dashboardControl.on('dashboardEndUpdate', initializeControls);
+    }
     if (viewerApiExtension)
         viewerApiExtension.on('itemActionAvailabilityChanged', onActionAvailabilityChanged);
-    if (dashboardControl)
-        dashboardControl.on('dashboardEndUpdate', initializeControls);
 }
 
 function initializeControls() {
@@ -23,17 +23,19 @@ function initializeControls() {
 };
 
 function getDrillDownValues() {
-    var drillDownTuples = viewerApiExtension.getAvailableDrillDownValues("gridDashboardItem1"),
-        drillDownValues = [];
+    if (viewerApiExtension) {
+        var drillDownTuples = viewerApiExtension.getAvailableDrillDownValues("gridDashboardItem1"),
+            drillDownValues = [];
 
-    if (viewerApiExtension.getAvailableDrillDownValues("gridDashboardItem1") != null) {
-        $.each(drillDownTuples, function (index, value) {
-            drillDownValues.push(value.getAxisPoint().getValue());
-        });
-        return drillDownValues;
-    }
-    else {
-        return function () { };
+        if (viewerApiExtension.getAvailableDrillDownValues("gridDashboardItem1") != null) {
+            $.each(drillDownTuples, function (index, value) {
+                drillDownValues.push(value.getAxisPoint().getValue());
+            });
+            return drillDownValues;
+        }
+        else {
+            return null;
+        }
     }
 };
 
@@ -43,18 +45,17 @@ function performDrillAction() {
         value: [$("#selectBox").data("dxSelectBox").option("value")]
     }]);
 
-    if (viewerApiExtension.canPerformDrillDown("gridDashboardItem1")) {
-        viewerApiExtension.performDrillDown("gridDashboardItem1", tuple);
-    }
+    if (viewerApiExtension.canPerformDrillDown("gridDashboardItem1")) 
+        viewerApiExtension.performDrillDown("gridDashboardItem1", tuple)
     else {
-        viewerApiExtension.performDrillUp("gridDashboardItem1");
+        if (viewerApiExtension.canPerformDrillUp("gridDashboardItem1"))
+            viewerApiExtension.performDrillUp("gridDashboardItem1");   
     };
 };
 
 function onActionAvailabilityChanged() {
     if (viewerApiExtension.canPerformDrillDown("gridDashboardItem1")) {
         $("#buttonContainer").dxButton({
-            disabled: false,
             text: "Drill Down"
         });
         $("#selectBox").dxSelectBox({
@@ -63,7 +64,6 @@ function onActionAvailabilityChanged() {
     }
     if (viewerApiExtension.canPerformDrillUp("gridDashboardItem1")) {
         $("#buttonContainer").dxButton({
-            disabled: false,
             text: "Drill Up"
         });
         $("#selectBox").dxSelectBox({
