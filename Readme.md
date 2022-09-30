@@ -34,4 +34,4 @@ When the Grid displays a list of products (the bottom-most detail level), you ca
 ## More Examples
 
 - [Dashboard for MVC - How to perform a drill-down in code](https://github.com/DevExpress-Examples/mvc-dashboard-drill-down-in-code)
-- [Dashboard for Web Forms - How to update the parameter value when the item's master filter state is changed](https://github.com/DevExpress-Examples/how-to-update-the-parameter-value-when-the-items-master-filter-state-is-changed-t575012)
+- [Dashboard for Web Forms - How to update the parameter value when the item's master filter state is changed](https://github.com/DevExpress-Examples/web-dashboard-update-parameter-master-filter-changed)
