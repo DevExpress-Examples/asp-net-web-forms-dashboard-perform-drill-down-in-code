@@ -22,21 +22,17 @@ function initializeControls() {
     });
 };
 
-function getDrillDownValues() {
+function getDrillDownValues() {    
+    var drillDownValues = [];
     if (viewerApiExtension) {
-        var drillDownTuples = viewerApiExtension.getAvailableDrillDownValues("gridDashboardItem1"),
-            drillDownValues = [];
-
-        if (viewerApiExtension.getAvailableDrillDownValues("gridDashboardItem1") != null) {
+        var drillDownTuples = viewerApiExtension.getAvailableDrillDownValues("gridDashboardItem1");
+        if (drillDownTuples != null) {
             $.each(drillDownTuples, function (index, value) {
                 drillDownValues.push(value.getAxisPoint().getValue());
             });
-            return drillDownValues;
-        }
-        else {
-            return null;
         }
     }
+    return drillDownValues;
 };
 
 function performDrillAction() {
