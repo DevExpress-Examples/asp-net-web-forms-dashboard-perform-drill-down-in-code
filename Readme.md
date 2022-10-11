@@ -4,7 +4,7 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 
-# Dashboard for Web Forms - How to Drill-Down on the Client
+# Dashboard for Web Forms - How to Drill Down on the Client
 
 <!-- run online -->
 **[[Run Online]](https://codecentral.devexpress.com/128579898/)**
@@ -33,7 +33,7 @@ When the Grid displays a list of products (the bottom-most detail level), you ca
 
 ## More Examples
 
-- [Dashboard for MVC - How to Drill-Down on the Client](https://github.com/DevExpress-Examples/mvc-dashboard-drill-down-in-code)
+- [Dashboard for MVC - How to Drill Down on the Client](https://github.com/DevExpress-Examples/mvc-dashboard-drill-down-in-code)
 - [Dashboard for Web Forms - How to update the parameter value when the item's master filter state is changed](https://github.com/DevExpress-Examples/web-dashboard-update-parameter-master-filter-changed)
 - [Dashboard for MVC - How to Apply Master Filter on the Client](https://github.com/DevExpress-Examples/mvc-dashboard-apply-master-filtering-in-code)
 - [Dashboard for Web Forms - How to apply Master Filtering in OLAP mode](https://github.com/DevExpress-Examples/web-forms-dashboard-apply-master-filtering-in-olap)
