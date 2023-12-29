@@ -4,9 +4,6 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 # Dashboard for Web Forms - How to Drill Down on the Client
-<!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/128579898/)**
-<!-- run online end -->
 
 The following example shows how to drill down in the Web Dashboard control on the client side.
 
